@@ -9,5 +9,9 @@ public class Voertuigen {
 	private Vector positie;
 
 	private boolean opEindBestemming;
+        
+        public void Voertuigen(){
+            
+        }
 
 }
