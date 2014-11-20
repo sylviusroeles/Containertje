@@ -1,3 +1,4 @@
+package mygame;
 public class OpslagKraan implements Kranen {
 
 

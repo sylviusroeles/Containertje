@@ -1,3 +1,5 @@
+package mygame;
+
 import java.awt.Dimension;
 import java.util.Date;
 import java.util.Vector;

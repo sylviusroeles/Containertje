@@ -1,3 +1,4 @@
+package mygame;
 import java.util.ArrayList;
 import java.util.Vector;
 

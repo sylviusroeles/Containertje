@@ -1,3 +1,6 @@
+package mygame;
+
+import java.awt.Container;
 import java.util.Vector;
 import java.util.ArrayList;
 
@@ -15,8 +18,8 @@ public class AGV {
 
 	}
 
-	public void laadContainer(Container container) {
-
+	public void setContainer(Container container) {
+            this.container = container;
 	}
 
 }

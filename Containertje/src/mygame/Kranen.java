@@ -1,3 +1,4 @@
+package mygame;
 import java.util.Vector;
 
 public interface Kranen {

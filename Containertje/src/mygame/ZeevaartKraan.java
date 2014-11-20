@@ -1,3 +1,4 @@
+package mygame;
 public class ZeevaartKraan implements Kranen {
 
 

@@ -1,3 +1,5 @@
+package mygame;
+
 public class BinnenVaartKraan implements Kranen {
 
 
