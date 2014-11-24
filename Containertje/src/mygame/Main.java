@@ -7,6 +7,8 @@ import com.jme3.math.Vector3f;
 import com.jme3.renderer.RenderManager;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.shape.Box;
+import java.io.IOException;
+import java.net.UnknownHostException;
 
 /**
  * test
@@ -16,6 +18,7 @@ public class Main extends SimpleApplication {
 
     public static void main(String[] args) {
         Main app = new Main();
+        app.startSocketConnection();
         app.start();
     }
 
@@ -39,5 +42,23 @@ public class Main extends SimpleApplication {
     @Override
     public void simpleRender(RenderManager rm) {
         //TODO: add render code
+    }
+    
+        private void startSocketConnection() {
+         //Creating a SocketClient object
+        SocketClient client = new SocketClient ("localhost",9991);
+        try {
+            //trying to establish connection to the server
+            client.connect();
+            //asking server for time
+            client.askForTime();
+            //waiting to read response from server
+            client.readResponse();
+            
+        } catch (UnknownHostException e) {
+            System.err.println("Host unknown. Cannot establish connection");
+        } catch (IOException e) {
+            System.err.println("Cannot establish connection. Server may not be up."+e.getMessage());
+        }
     }
 }
